@@ -13,7 +13,7 @@ const GameCard = ({ card }: any) => {
         <p className="text-base text-[#4B494A] font-lato">
           {card.cardDesciption}
         </p>
-        <button className="py-2 px-3 font-semibold bg-gradient-to-br from-[#AD0B40] to-[#FF1917] rounded-lg focus:outline-none w-full">
+        <button className="py-3 px-3 font-semibold bg-gradient-to-br from-[#AD0B40] to-[#FF1917] rounded-lg focus:outline-none w-full">
           Play Now
         </button>
       </div>

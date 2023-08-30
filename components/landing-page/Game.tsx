@@ -3,32 +3,31 @@ import React from "react";
 import GameCard from "./GameCard";
 import gamelogo from "../../public/assets/game/Gamelogo.svg"
 import Image from "next/image";
+import pinkchip from "../../public/assets/game/pink-chip.svg"
+import game from "../../public/assets/game/abs-1.svg";
 
 
 const Game = () => {
   return (
     <div className="bg-[#0C0C0C]  relative w-[100vw]  py-12 px-3 text-white">
-      <div className="m-5 border-yellow-600 ">
-        <div className="mx-auto   flex items-center justify-center text-white font-bold text-center text-2xl border-pink-500 ">
-          <Image src={gamelogo} alt="gamelogo" className="" />
-        </div>
-        <div className="relative top-[-58px] game-text ">
-          <p className="flex justify-center  items-center  text-white expl-text text-4xl font-normal leading-[3rem] tracking-[0em] text-center ">
-            {" "}
-            Games
-          </p>
+
+      <div className="py-[2rem] flex items-center justify-center px-auto">
+        <div className="m-10 border-yellow-600 headtop">
+          <div className="flex items-center expl-text text-3xl justify-center py-[1rem] border-yellow-500 ">
+            <h1 className="text-center items-center"> Games </h1>
+          </div>
         </div>
       </div>
 
-      <img
-        src="/assets/game/pink-chip.svg"
-        alt=""
+      <Image
+        src={pinkchip}
+        alt="chip"
         className="w-14 sm:w-16 sm:h-16 lg:w-24 h-12 lg:h-24 top-8 right-[-0.5em] absolute"
       />
 
-      <img
-        src="/assets/game/abs-1.svg"
-        alt=""
+      <Image
+        src={game}
+        alt="game"
         className="w-14 sm:w-16 sm:h-16 lg:w-24 h-12 lg:h-24  top-8 left-1 absolute"
       />
 

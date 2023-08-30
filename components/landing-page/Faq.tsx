@@ -11,7 +11,7 @@ const Faq = () => {
   return (
     <section className="mx-auto p-16 pb-28 sm:pb-32  lg:p-40  bg-[#0c0c0c] text-white relative ">
       <div>
-        <div className="mx-auto max-w-2xl lg:text-center">
+        <div className="mx-auto max-w-4xl lg:text-center">
           <h2 className=" text-xl md:text-3xl lg:text-5xl expl-text font-normal leading-10 text-white  text-center">
             Frequently Asked Questions
           </h2>

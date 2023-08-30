@@ -19,32 +19,26 @@ const Champions: React.FC = () => {
           <Image src={champrectangle} alt="logo" className="mt-[-2px]" />
         </div>
 
-        <div className=" border-green-700 relative top-3">
-          <div className="w-[100%] py-[.2rem] px-[.3rem] m-auto text-white font-bold text-center  border-pink-500 ">
-            <Image src={gamelogo} alt="gamelogo" />
-          </div>
-          <p
-            className="text-center m-auto  text-2xl sm:text-3xl sm:mt-[-3px] md:mt-[-7px] md:text-3xl lg:text-4xl relative font-[1rem] top-[-55px] text-white
-           champ-text
-          "
-          >
-            {" "}
-            Champions Talk
-          </p>
-        </div>
-
         <div className="w-[15%] border-red-700">
           <Image src={sufflecoin} alt="logo" className="mt-[-2px]" />
         </div>
       </div>
+      <div className="py-[.5rem] relative top-[-10px] flex items-center justify-center m-auto">
+        <div className=" border-yellow-600 headtop">
+          <div className="flex items-center expl-text text-3xl justify-center py-[1rem] border-yellow-500 ">
+            <h1 className="text-center  text-white items-center"> Champions Talk </h1>
+          </div>
+        </div>
+      </div>
 
-      <div className="max-w-8xl hidden md:block lg:block  py-[1rem] px-[1rem] m-auto border-yellow-500">
+      <div className="max-w-8xl  hidden md:block  py-[1rem] px-[1rem] m-auto border-yellow-500">
         <ChampionCard />
       </div>
 
-      <div className="max-w-8xl  py-[1rem] px-[.2rem] m-auto border-yellow-500  champmediumsize">
+      <div className="max-w-8xl py-[1rem] px-[.2rem] m-auto border-yellow-500  champmediumsize">
         <Champmd />
       </div>
+
     </div>
   );
 };

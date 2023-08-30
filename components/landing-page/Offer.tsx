@@ -6,19 +6,16 @@ import Image from "next/image";
 const Offer = () => {
   return (
     <div className="bg-black text-white py-10">
-      <div className="m-5 border-yellow-600">
-        <div className="mx-auto   flex items-center justify-center text-white font-bold text-center text-2xl border-pink-500 ">
-          <Image src={gamelogo} alt="gamelogo" className="" />
-        </div>
-        <div className="relative top-[-58px]  ">
-          <p className="flex justify-center  items-center  text-white expl-text text-4xl font-normal leading-[3rem] tracking-[0em] text-center">
-            {" "}
-            Exclusive Offers
-          </p>
+      <div className="py-[2rem] flex items-center justify-center px-auto">
+        <div className="m-10 border-yellow-600 headtop">
+          <div className="flex items-center expl-text sm:text-base lg:text-3xl justify-center py-[1rem] border-yellow-500 ">
+            <h1 className="text-center items-center"> Exclusive Offers </h1>
+          </div>
         </div>
       </div>
+    
 
-      <div className="flex w-[95%] m-auto  justify-center items-center flex-wrap px-[2rem] py-3 gap-4 ">
+      <div className="flex w-[95%] m-auto  justify-center items-center flex-wrap px-[2rem] py-3 sm:gap-7 lg:gap-4  ">
         {offerDeatils.map((offer) => {
           return (
             <div

@@ -22,6 +22,15 @@ body {
   font-family: 'marbley';
 }
 
+.main-nav-con{
+ 
+   box-shadow: rgba(42, 40, 40, 0.3) 0px 10px 8px, rgba(14, 12, 12, 0.22) 0px 5px 2px;
+     /* background-image: url('../public/assets/hero/navshdow.svg'); */
+   background-image: url('../public/assets/hero/shadownavp.png'); 
+   border-radius: 30px;
+     opacity: 10;
+}
+
 
      .shape {
         width: 90%;
@@ -88,12 +97,21 @@ body {
   );
  }
 
+ .join-button:hover {
+  background: linear-gradient(
+    rgba(182, 61, 101, 0.88)
+rgb(229, 47, 44)
+
+  );
+  scale: (1.2);
+ }
+
+
 
  @media screen and (min-width: 640px) {
      .mobilehero{
        display: none;
      }
-     
 }
 
 @media screen and (min-width:500px) {
@@ -102,19 +120,12 @@ body {
          margin: auto;
      }
      .sikka{
-      height: 100px;
-      margin-top: 15px;
+      margin-top: 30px;
      }
      .heroparagrapgh{
       font-size: .8rem;
-     }
-     .herosign{
-       padding: 8px 15px 8px 15px;
-       font-size: 1rem;
-     }
-     .herologin{
-       padding: 7px 15px 7px 15px;
-       font-size: 1rem;
+      padding: 5px;
+      line-height: 1rem;
      }
 
 }
@@ -159,9 +170,6 @@ background: linear-gradient(0deg, rgba(7,7,7,1) 66%, rgba(19,9,28,1) 100%);
 @media screen and (min-width:350px) {
      .champ-text{
        margin-top: 10px;
-     }
-     .game-text{
-      margin-top: 5px;
      }
 }
 
@@ -222,3 +230,65 @@ background: linear-gradient(0deg, rgba(7,7,7,1) 66%, rgba(19,9,28,1) 100%);
   box-shadow: 0px 0px 10px 0px #f442b799;
    border-radius: 10px;
    }
+
+
+   /* ---------- title bar ------------ */
+
+   
+     .headtop {
+        width: 310px;
+        height: 20%;
+         margin: auto;
+        background-color: rgb(154, 12, 12);
+        position: relative;
+        top: 0;
+      }
+      .headtop:before {
+        content: "";
+        width: 99.5%;
+        height: 99%;
+        margin: auto;
+        background-color:rgb(59, 8, 17);
+        display: block;
+        position: absolute;
+         top: 3px;
+         bottom: 3px;  
+        left: 1px;
+        right: 4px;
+        z-index: -1;
+      }
+      .headtop,
+      .headtop:before {
+        -webkit-clip-path: polygon(5% 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+        clip-path: polygon(10% 0%, 91% 0%, 100% 50%, 91% 100%, 10% 100%, 0% 55%);}
+
+    
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.fade-in-left {
+  animation: fadeLeft 0.5s ease-in-out;
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-right {
+  animation: fadeRight 0.5s ease-in-out;
+}
+

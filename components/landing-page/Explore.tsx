@@ -3,12 +3,12 @@ import React from "react";
 
 const Explore = () => {
   return (
-    <div className="bg-gradient-to-br from-[#150f1c] to-[#2d1930]  text-white py-[4rem] px-6 border border-y-[#B40E0D] border-y-2">
+    <div className="bg-gradient-to-br from-[#150f1c] to-[#2d1930]  text-white py-[4rem] px-6  border-y-[#B40E0D] border-y-2 w-[100vw]">
       <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center w-full relative top-[-2rem] expl-text">
         Explore Sikka Play
       </h2>
       <div className="flex  justify-center items-center lg:max-w-7xl">
-        <div className="basis-full sm:basis-[60%] flex flex-wrap items-center justify-center gap-4">
+        <div className="basis-full sm:basis-[60%] flex  items-center justify-center gap-4">
           {Exploredetails.map((explore) => {
             return (
               <div
