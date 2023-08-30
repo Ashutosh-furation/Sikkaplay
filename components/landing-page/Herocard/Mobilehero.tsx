@@ -6,7 +6,49 @@ import heroshadow from "../../../public/assets/hero/heroboxshadow.png";
 
 const Mobilehero = () => {
   return (
-    <div className="max-w-4xl m-auto px-[.7rem]  flex justify-between gap-6 border-yellow-700 sikka">
+    <div className="max-w-4xl h-screen border-yellow-700 mobilefor  mobilehero ">
+      <div className="max-h-screen border-red-600">
+        <div className=" border-green-600">
+          <div className="heroshadow  relative top-[-80px] h-[1px] z-1">
+            <Image src={heroshadow} alt="heroshadow" />
+          </div>
+          <div className=" mx-auto  px-2 flex items-center justify-center  border-yellow-400">
+            <Image src={heroimage} alt="Image" className="w-[40%] heroimage" />
+          </div>
+        </div>
+
+        <div className="flex item-center justify-center">
+          <div className="w-[50%]  m-auto ">
+            <Image src={sikka} alt="Sikkafont" className=" m-auto" />
+          </div>
+        </div>
+
+        <div className=" border-red-400">
+          <div className="px-2  m-auto">
+            <p className="text-white text-center text-base  font-Lato text-[rgba(255, 255, 255, 0.8)] tracking-[0.1px] ">
+              Experience boundless amusement on ultimate betting platform!
+              Unfold endless entertainment.
+            </p>
+          </div>
+        </div>
+        <div className="flex justify-center  items-center space-x-4 ">
+          <button className="px-8 py-2 text-white  text-[.4rem] rounded  bg-opacity-15  border-white border-[0.5px] ">
+            Login
+          </button>
+          <button className="bg-white-500 px-8 py-2 text-[.5rem]  rounded bg-white text-[#ad0b40]  border-white border-[0.5px] ">
+            Sign Up
+          </button>
+        </div>
+      </div>
+    </div>
+  ); 
+
+
+};
+
+export default Mobilehero;
+/**
+ *  <div className="max-w-4xl m-auto px-[.7rem]  flex justify-between gap-6 border-yellow-700 sikka">
       <div className="w-[60%]   m-auto border-yellow-500">
         <div className="w-[80%]  px-[.4rem] mt-[-1rem] border-pink-500">
           <Image src={sikka} alt="Sikkafont" className="sm:w-[80%] " />
@@ -41,12 +83,7 @@ const Mobilehero = () => {
         </div>
       </div>
     </div>
-  ); 
-
-
-};
-
-export default Mobilehero;
+ */
 
 /**
  * <div className="max-w-4xl   border-yellow-700  ">

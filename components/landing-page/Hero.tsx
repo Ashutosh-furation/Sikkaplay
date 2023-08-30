@@ -9,10 +9,31 @@ import herobackground from "../../public/assets/hero/hero-background.svg";
 
 const Hero: React.FC = () => {
   return (
-    <section >
-     
-      {/* <section className="bg-[url('/assets/hero/hero-background.svg')] bg-center bg-no-repeat  w-[100vh] h-[100vh] "></section> */}
-      <div className="w-[100%]  relative  ">
+    <section>
+      <section
+        className="bg-[url('/assets/hero/hero-background.svg')] 
+      bg-center
+       bg-no-repeat mobilesection  bg-[#0C0C0C]
+        w-[100vw] "
+      >
+        <div
+          className="w-[100%] m-auto top-0
+          fixed z-20 border-red-500 
+          bg-[url('/assets/hero/Navboxshadow.svg')]
+           py-[.7rem]  px-[1rem]  "
+        >
+          <Mobilenav />
+        </div>
+        <div className=" m-auto flex items-center justify-center">
+          <div className="m-auto  py-1 relative top-[10rem]">
+            <Mobilehero />
+          </div>
+        </div>
+      </section>
+
+      {/* -------- web ------------ */}
+
+      <div className="w-[100%] hidden sm:block  relative  ">
         <div className="z-0 w-full   border-yellow-600 bg-[#0C0C0C]  object-cover">
           <Image
             src={herobackground}
@@ -22,43 +43,22 @@ const Hero: React.FC = () => {
         </div>
         <div className="z-10  border-green-600 absolute inset-0 text-6xl text-white ">
           <div
-            className=" w-[100%] m-auto
-          fixed z-20 border-red-500
+            className=" w-[100%]
+          fixed z-20
           main-nav-con
-           py-[1rem] opacity-2 rounded-lg hidden lg:block md:block
-          "
+           py-[1rem] opacity-2 rounded-lg"
           >
             <div>
               <Navbar />
             </div>
           </div>
-
-          <div
-            className="w-[100%] m-auto
-          fixed z-20 border-red-500 
-          bg-[url('/assets/hero/Navboxshadow.svg')]
-           py-[.7rem]  px-[1rem]   sm:block lg:hidden md:hidden
-          "
-          >
-            <Mobilenav />
-          </div>
-
           <div
             className=" m-auto relative 
-          lg:py-[1.5rem] sm:py-[1rem]  hidden sm:block 
+          lg:py-[1.5rem] sm:py-[1rem]  
           top-[8rem] sm:top-[2rem] md:top-[5rem] 
            border-yellow-500"
           >
             <HeroCard />
-          </div>
-
-          <div
-            className="m-auto  
-             relative 
-             top-[4rem]
-              mobilehero"
-          >
-            <Mobilehero />
           </div>
         </div>
       </div>
@@ -67,3 +67,22 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
+
+/**
+ * <div
+            className="w-[100%] m-auto
+          fixed z-20 border-red-500 
+          bg-[url('/assets/hero/Navboxshadow.svg')]
+           py-[.7rem]  px-[1rem]   sm:block lg:hidden md:hidden
+          ">
+            <Mobilenav />
+          </div>
+            <div
+            className="m-auto border-2 border-red-600 
+             relative 
+             top-[4rem]
+              mobilehero"
+          >
+            <Mobilehero />
+          </div> 
+ */

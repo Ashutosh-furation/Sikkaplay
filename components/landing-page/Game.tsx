@@ -1,40 +1,54 @@
+'use client'
 import { GameCardDetails } from "@/constants";
-import React from "react";
+import React  from "react";
 import GameCard from "./GameCard";
 import gamelogo from "../../public/assets/game/Gamelogo.svg"
 import Image from "next/image";
 import pinkchip from "../../public/assets/game/pink-chip.svg"
 import game from "../../public/assets/game/abs-1.svg";
-
+import AOS from "aos";
+import "aos/dist/aos.css"; 
 
 const Game = () => {
+
+// useEffect(() => {
+//   AOS.init();
+// }, []);
+
   return (
     <div className="bg-[#0C0C0C]  relative w-[100vw]  py-12 px-3 text-white">
-
-      <div className="py-[2rem] flex items-center justify-center px-auto">
+      <div
+        className="py-[2rem]  flex items-center justify-center px-auto"
+      >
         <div className="m-10 border-yellow-600 headtop">
-          <div className="flex items-center expl-text text-3xl justify-center py-[1rem] border-yellow-500 ">
-            <h1 className="text-center items-center"> Games </h1>
+          <div className="flex items-center  justify-center lg:py-[1rem] py-[.6rem] border-yellow-500 ">
+            <h1 className="text-center expl-text text-[1.2rem] lg:text-4xl items-center">
+              {" "}
+              Games{" "}
+            </h1>
           </div>
         </div>
       </div>
 
       <Image
+        data-aos="fade-up"
         src={pinkchip}
         alt="chip"
         className="w-14 sm:w-16 sm:h-16 lg:w-24 h-12 lg:h-24 top-8 right-[-0.5em] absolute"
       />
 
       <Image
+        data-aos="fade-up"
         src={game}
         alt="game"
         className="w-14 sm:w-16 sm:h-16 lg:w-24 h-12 lg:h-24  top-8 left-1 absolute"
       />
 
-      <div className="game-card-container  grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7   my-3 lg:my-12 sm:my-6  sm:justify-between sm:px-2  ">
+      <div className="game-card-container max-w-8xl m-auto  grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7   my-3 lg:my-12 sm:my-6  sm:justify-between sm:px-2  ">
         {GameCardDetails.map((card) => {
           return (
             <div
+              data-aos="fade-up"
               key={card.id}
               className="basis-full p-6 sm:basis-[40%] md:basis-[48%] lg:basis-[30%]  "
             >
