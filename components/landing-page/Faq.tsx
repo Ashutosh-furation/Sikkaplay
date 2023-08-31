@@ -37,7 +37,7 @@ const Faq = () => {
                 )}
               </button>
               {activeIndex === index && (
-                <div className="px-4 pb-5 sm:px-6 sm:pb-6 transition-all	 duration-200"> 
+                <div className="px-4 pb-5 sm:px-6 sm:pb-6 transition-all	 duration-200">
                   <p className="text-[#5f5f5f] text-xs md:text-sm lg:text-base">
                     {faq.answer}
                   </p>
@@ -53,21 +53,31 @@ const Faq = () => {
         className="w-16 h-16 lg:w-[100px] lg:h-[100px] absolute top-[-4rem] right-8"
       />
       <img
+        data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000"
         src={"/assets/faq/BlackChip.svg"}
         alt="img"
         className="w-16 h-16 lg:w-[100px] lg:h-[100px] absolute top-1 left-2 lg:left-12"
       />
       <img
+        data-aos="fade-up"
+        data-aos-duration="2000"
         src={"/assets/faq/PinkChip.svg"}
         alt="img"
         className="w-16 h-16 lg:w-[100px] lg:h-[100px] absolute bottom-[-2rem] sm:bottom-[-2.5rem] md:bottom-[-2.8rem] lg:bottom-[-3rem] left-8"
       />
       <img
+        data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000"
         src={"/assets/faq/GreenChip.svg"}
         alt="img"
         className="w-20 h-20 lg:w-[140px] lg:h-[140px] absolute bottom-8 right-4 lg:right-8"
       />
       <img
+        data-aos="fade-up"
+        data-aos-duration="2000"
         src={"/assets/faq/AceCard.svg"}
         alt="img"
         className=" rotate-180 w-16 h-16 lg:w-[110px] lg:h-[110px] absolute bottom-[4rem] left-4 lg:left-28"

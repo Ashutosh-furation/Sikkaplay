@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
         className="bg-[url('/assets/hero/hero-background.svg')] 
       bg-center
        bg-no-repeat mobilesection  bg-[#0C0C0C]
-        w-[100vw]  h-[90vh] "
+        w-[100vw]  h-[90vh]  "
       >
         <div
           className="w-[100%] m-auto top-0
@@ -25,13 +25,13 @@ const Hero: React.FC = () => {
           <Mobilenav />
         </div>
         <div className=" m-auto flex items-center justify-center">
-          <div className="m-auto  py-1 relative top-[.7rem]">
+          <div className="m-auto   relative top-[4rem]">
             <Mobilehero />
           </div>
         </div>
       </section>
 
-      {/* -------- web ------------ */}
+  
 
       <div className="w-[100%] hidden sm:block  relative  ">
         <div className="z-0 w-full   border-yellow-600 bg-[#0C0C0C]  object-cover">
@@ -67,22 +67,3 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
-
-/**
- * <div
-            className="w-[100%] m-auto
-          fixed z-20 border-red-500 
-          bg-[url('/assets/hero/Navboxshadow.svg')]
-           py-[.7rem]  px-[1rem]   sm:block lg:hidden md:hidden
-          ">
-            <Mobilenav />
-          </div>
-            <div
-            className="m-auto border-2 border-red-600 
-             relative 
-             top-[4rem]
-              mobilehero"
-          >
-            <Mobilehero />
-          </div> 
- */

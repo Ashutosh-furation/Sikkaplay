@@ -25,9 +25,6 @@ body {
   text-align: center;
   font-size: 18px;
   width: 25vw;
-  /* background: #fff; */
-  /* border: 2px solid white; */
-  /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,3 +36,22 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
+.swiper-pagination-bullet {
+   width: 10px;
+    height: 10px;
+    border-radius: 0px;
+     transform: rotate(90deg);
+   opacity: 1;
+   background-color: rgb(78, 74, 74);
+}
+
+.swiper-pagination-bullet-active {
+    width: 10px;
+    height: 10px;
+    border-radius: 0px;
+     transform: rotate(90deg);
+    color: #fff;
+    background: #a90b0b;
+}
+

@@ -6,8 +6,8 @@ import heroshadow from "../../../public/assets/hero/heroboxshadow.png";
 
 const Mobilehero = () => {
   return (
-    <div className="max-w-4xl border-2 border-yellow-700 mobilefor  mobilehero ">
-      <div className="border-2 border-red-600">
+    <div className="max-w-4xl  border-yellow-700 mobilefor  mobilehero ">
+      <div className=" border-red-600">
         <div className=" border-green-600">
           <div className="heroshadow  relative top-[-80px] h-[1px] z-1">
             <Image src={heroshadow} alt="heroshadow" />

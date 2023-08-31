@@ -11,13 +11,11 @@ import "aos/dist/aos.css";
 
 const Game = () => {
 
-// useEffect(() => {
-//   AOS.init();
-// }, []);
+
 
   return (
     <div className="bg-[#0C0C0C]  relative w-[100vw]  py-12 px-3 text-white">
-      <div className="py-[2rem]  flex items-center justify-center px-auto">
+      <div className="py-[2rem] px-6 md:px-1 lg:px-1  flex items-center justify-center px-auto">
         <div className="m-10   py-[.2rem] border-yellow-600 headtop">
           <div className="flex  border-green-700 items-center  justify-center ">
             <h1 className="text-center py-2 items-center  px-24  expl-text text-[1.2rem] lg:text-4xl ">

@@ -16,25 +16,42 @@ const ChampionCard: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   const handleSlideChange = (swiper: any) => {
-    // setActiveIndex(swiper.activeIndex);
      setActiveIndex(swiper.activeIndex);
   };
-  console.log("active", activeIndex);
+  // console.log("active", activeIndex);
 
   return (
-    
     <div
       className="lg:py-[1rem] lg:px-[3.5rem]
      relative top-[-20px] overflow-hidden "
     >
       <Swiper
-        slidesPerView={3}
+        slidesPerView={1}
         spaceBetween={35}
         navigation={true}
         centeredSlides={true}
+        initialSlide={1}
         onSlideChange={handleSlideChange}
         pagination={{
           clickable: true,
+        }}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+          1440: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
         }}
         modules={[Pagination, Navigation]}
         className="mySwiper overflow-hidden  md:border-red-600"
@@ -44,13 +61,13 @@ const ChampionCard: React.FC = () => {
             return (
               <SwiperSlide
                 key={index}
-                className={`swiper-dot congrs user-descrip userimage user-name Image ${
+                className={`swiper-dot  congrs user-descrip userimage user-name Image ${
                   activeIndex === index ? "selected" : ""
                 }`}
               >
-                <div className="md:py-[.5rem] md:px-[.8rem] lg:py-[.8rem] lg:px-[1rem]">
+                <div className="py-3 px-2 md:py-[.5rem]  md:px-[.8rem] lg:py-[.8rem] lg:px-[1rem]">
                   <div className="m-auto  congrs"></div>
-                  <div className="flex py-[.1rem] px-[.3rem]  justify-center items-center ">
+                  <div className="flex  py-[.1rem] px-[.3rem]  justify-center items-center ">
                     <div
                       className={`Image rounded-full userimage  `}
                       style={{
@@ -79,7 +96,7 @@ const ChampionCard: React.FC = () => {
                       {data.username}
                     </p>
                   </div>
-                  <div className=" lg:py-[.7rem] lg:px-[1.5rem] border-green-600 mt-4 ">
+                  <div className=" m-5 sm:py[2rem] md:py[1.5rem] lg:py-[.9rem]  lg:px-[1.5rem] border-green-600 mt-4 ">
                     <p
                       className={`${
                         index + 1
@@ -97,7 +114,6 @@ const ChampionCard: React.FC = () => {
           })}
       </Swiper>
     </div>
-
   );
 };
 

@@ -8,11 +8,11 @@ const Offer = () => {
     <div className="bg-black text-white py-10">
       <div
         data-aos="fade-up"
-        className="py-[2rem]   aos-init aos-animate flex items-center justify-center px-auto"
+        className="py-[2rem] px-8 md:px-1 lg:px-1  aos-init aos-animate flex items-center justify-center px-auto"
       >
-        <div className="m-10 border-yellow-600 headtop">
+        <div className="m-10   border-yellow-600 headtop">
           <div className="flex items-center expl-text  justify-center py-[.6rem] lg:py-[1rem] border-yellow-500 ">
-            <h1 className="text-center border-2 items-center  text-[1.2rem] lg:text-3xl ">
+            <h1 className="text-center  items-center  text-[1.2rem] lg:text-3xl ">
               {" "}
               Exclusive Offers{" "}
             </h1>
