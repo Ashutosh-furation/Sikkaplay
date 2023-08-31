@@ -12,7 +12,7 @@ const Faq = () => {
     <section className="mx-auto p-16 pb-28 sm:pb-32  lg:p-40  bg-[#0c0c0c] text-white relative ">
       <div>
         <div className="mx-auto max-w-4xl lg:text-center">
-          <h2 className=" text-xl md:text-3xl lg:text-5xl expl-text font-normal leading-10 text-white  text-center">
+          <h2 className=" text-2xl md:text-3xl lg:text-5xl expl-text font-normal leading-10 text-white  text-center">
             Frequently Asked Questions
           </h2>
         </div>
@@ -27,18 +27,18 @@ const Faq = () => {
                 className="flex w-full items-start justify-between px-4 py-5 sm:p-6 md:items-center"
                 onClick={() => handleAccordionClick(index)}
               >
-                <span className="flex text-start text-sm sm:text-base md:text-lg lg:text-xl font-semibold text-white">
+                <span className="flex text-start text- md:text-base lg:text-lg font-semibold text-white">
                   {faq.question}
                 </span>
                 {activeIndex === index ? (
-                  <ChevronUp className="h-5 w-5 text-gray-160" />
+                  <ChevronUp className="h-5 w-5 text-gray-160 transition-all	 duration-200" />
                 ) : (
-                  <ChevronDown className="h-5 w-5 text-gray-160" />
+                  <ChevronDown className="h-5 w-5 text-gray-160 transition-all	 duration-200" />
                 )}
               </button>
               {activeIndex === index && (
-                <div className="px-4 pb-5 sm:px-6 sm:pb-6">
-                  <p className="text-gray-160 text-xs sm:text-sm md:text-base lg:text-lg">
+                <div className="px-4 pb-5 sm:px-6 sm:pb-6 transition-all	 duration-200"> 
+                  <p className="text-[#5f5f5f] text-xs md:text-sm lg:text-base">
                     {faq.answer}
                   </p>
                 </div>

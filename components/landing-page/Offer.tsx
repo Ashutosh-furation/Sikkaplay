@@ -28,7 +28,7 @@ const Offer = () => {
               key={offer.id}
               className="basis-full  aos-init aos-animate object-fill sm:basis-[45%] md:basis-[30%] "
             >
-              <div className="w-[90%] mx-auto ">
+              <div className="w-[90%] mx-auto hover:scale-105 transition-all delay-200 ease-in ">
                 <img
                   src={offer.offerImage}
                   alt=""

@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-[url('/assets/footer/footer-background.svg')] text-white bg-no-repeat bg-cover">
       <div className="footer-conatainer">
-        <div className="footer-information px-8 pt-28 text-center">
+        <div className="footer-information px-8 pt-10 md:pt-28 text-center">
           <h3
             data-aos="fade-up"
             className=" text-2xl sm:text-3xl md:text-4xl lg:text-5xl expl-text"
@@ -52,7 +52,7 @@ const Footer = () => {
             </h3>
             <div
               data-aos="fade-up"
-              className="footer-payment-security-images flex justify-around gap-3"
+              className="footer-payment-security-images flex justify-around gap-3 w-[75%] mx-auto"
             >
               {footerSecurity.length > 0 &&
                 footerSecurity.map((image) => (
@@ -70,7 +70,7 @@ const Footer = () => {
             className="footer-payment-images basis-full md:basis-[40%]"
           >
             <h3 className="text-2xl  py-5 text-center">Payment Partners</h3>
-            <div className="footer-payment-images flex justify-around gap-3">
+            <div className="footer-payment-images flex justify-around gap-3  w-[75%] mx-auto">
               {footerPayment.length > 0 &&
                 footerPayment.map((image) => (
                   <img
@@ -94,18 +94,18 @@ const Footer = () => {
 
         <div
           data-aos="fade-up"
-          className="footer-container flex flex-wrap justify-between px-10 py-10 text-sm gap-6"
+          className="footer-container flex flex-wrap justify-between px-20 py-10 text-sm gap-6"
         >
           <div
             data-aos="fade-up"
-            className="left-footer basis-full sm:basis-[30%] text-sm md:text-base lg:text-lg "
+            className="left-footer  basis-[50%] text-sm md:text-base lg:text-lg "
           >
-            <div className="address py-5 text-center">
-              <h4>Address:</h4>
-              <p>Level 1, 12 Sample St, Nepal</p>
+            <div className="address py-5 text-left">
+              <h4 className="text-sm sm:text-base md:text-base lg:text-lg">Address:</h4>
+              <p className="text-sm sm:text-base md:text-base lg:text-lg">Level 1, 12 Sample St, Nepal</p>
             </div>
-            <div className="Contact-us text-center">
-              <h4>Contact:</h4>
+            <div className="Contact-us  text-left">
+              <h4 className="text-sm sm:text-base md:text-base lg:text-lg">Contact:</h4>
               <a href="#" className="underline block">
                 1800 123 4567{" "}
               </a>
@@ -115,54 +115,25 @@ const Footer = () => {
             </div>
           </div>
           <div
-            data-aos="fade-up"
-            className="right-footer flex flex-wrap  basis-full sm:basis-[30%] text-sm md:text-base lg:text-lg justify-evenly "
+            // data-aos="fade-up"
+            className="right-footer flex flex-wrap py-5 basis-[35%] sm:basis-[45%] text-sm md:text-base lg:text-lg justify-evenly "
           >
-            <a href="#" className="basis-1/2 text-center">
-              Link 1
+            <a href="#" className="basis-full  sm:text-left md:text-right text-sm sm:text-base md:text-base lg:text-lg">
+            Privacy Policy
             </a>
-            <a href="#" className="basis-1/2 text-center">
-              Link 2
+            <a href="#" className="basis-full  sm:text-left md:text-right text-sm sm:text-base md:text-base lg:text-lg">
+            Terms of Service
             </a>
-            <a href="#" className="basis-1/2 text-center">
-              Link 3
-            </a>
-            <a href="#" className="basis-1/2 text-center">
-              Link 4
-            </a>
-            <a href="#" className="basis-1/2 text-center">
-              Link 5
-            </a>
-            <a href="#" className="basis-1/2 text-center">
-              Link 6
-            </a>
-            <a href="#" className="basis-1/2 text-center">
-              Link 7
-            </a>
-            <a href="#" className="basis-1/2 text-center">
-              Link 8
+            <a href="#" className="basis-full  sm:text-left md:text-right text-sm sm:text-base md:text-base lg:text-lg">
+            Cookies Settings
             </a>
           </div>
         </div>
 
-        <hr data-aos="fade-up" className="w-[95%] mx-auto bg-slate-400" />
-        <h3 data-aos="fade-up" className="text-sm text-center py-8">
+        <hr className="w-[95%] mx-auto bg-slate-400" />
+        <h3  className="text-sm text-center py-8">
           © 2023 Relume. All rights reserved.
         </h3>
-        <div
-          data-aos="fade-up"
-          className="footer-links flex justify-around px-10 w-[50%] mx-auto text-sm pb-8 flex-wrap"
-        >
-          <a href="#" className="underline text-center test-sm">
-            Privacy Policy
-          </a>
-          <a href="#" className="underline text-center test-sm">
-            Terms of Service
-          </a>
-          <a href="#" className="underline text-center test-sm">
-            Cookies Settings
-          </a>
-        </div>
       </div>
     </footer>
   );

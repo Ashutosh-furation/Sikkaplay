@@ -8,7 +8,6 @@ const GameFeatures = () => {
         GameFeature.map((feature) => {
           return (
             <div
-              data-aos="fade-up"
               key={feature.id}
               className="basis-full lg:basis-[30%] flex flex-col items-center py-3 gap-3 align-baseline"
             >
@@ -16,7 +15,7 @@ const GameFeatures = () => {
                 <img src={feature.featureLogo} alt="feature-Image" />
               </div>
               <h4 className="text-xl text-center">{feature.featureHeading}</h4>
-              <p className="text-gray-500 w-[75%] mx-auto text-center text-base">
+              <p className="text-[#5f5f5f] mb-4  text-center sm:w-[75%] sm:mx-auto text-base">
                 {feature.featurePara}
               </p>
             </div>

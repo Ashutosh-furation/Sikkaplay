@@ -119,15 +119,7 @@ export const footerSecurity = [
 export const footerPayment = [
   {
     id: 1,
-    image: "/assets/footer/google-img.svg",
-  },
-  {
-    id: 2,
-    image: "/assets/footer/paytm-img.svg",
-  },
-  {
-    id: 3,
-    image: "/assets/footer/UPI-img.svg",
+    image: "/assets/footer/stripe.svg",
   },
 ];
 import first from "../public/assets/champs/champfir.svg"
