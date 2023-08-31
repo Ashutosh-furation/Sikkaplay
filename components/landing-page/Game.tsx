@@ -17,12 +17,10 @@ const Game = () => {
 
   return (
     <div className="bg-[#0C0C0C]  relative w-[100vw]  py-12 px-3 text-white">
-      <div
-        className="py-[2rem]  flex items-center justify-center px-auto"
-      >
-        <div className="m-10 border-yellow-600 headtop">
-          <div className="flex items-center  justify-center lg:py-[1rem] py-[.6rem] border-yellow-500 ">
-            <h1 className="text-center expl-text text-[1.2rem] lg:text-4xl items-center">
+      <div className="py-[2rem]  flex items-center justify-center px-auto">
+        <div className="m-10   py-[.2rem] border-yellow-600 headtop">
+          <div className="flex  border-green-700 items-center  justify-center ">
+            <h1 className="text-center py-2 items-center  px-24  expl-text text-[1.2rem] lg:text-4xl ">
               {" "}
               Games{" "}
             </h1>

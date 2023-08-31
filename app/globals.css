@@ -23,12 +23,12 @@ body {
 }
 
 .main-nav-con{
- 
+    /* background: #1f141f; */
    box-shadow: rgba(42, 40, 40, 0.3) 0px 10px 8px, rgba(14, 12, 12, 0.22) 0px 5px 2px;
      background-image: url('../public/assets/hero/navshdow.svg');
    /* background-image: url('../public/assets/hero/shadownavp.png');  */
    /* border-radius: 30px; */
-     opacity: 10;
+     /* opacity: 10; */
 }
 
 
@@ -99,11 +99,9 @@ body {
 
  .join-button:hover {
   background: linear-gradient(
-    rgba(182, 61, 101, 0.88)
-rgb(229, 47, 44)
+   rgba(140, 31, 66, 1) 1%,
+rgb(139, 9, 9,5) 90% )
 
-  );
-  scale: (1.2);
  }
 
 
@@ -221,7 +219,7 @@ background: linear-gradient(0deg, rgba(7,7,7,1) 66%, rgba(19,9,28,1) 100%);
 
    
      .headtop {
-        width: 310px;
+        width: 340px;
         height: 20%;
          margin: auto;
         background-color: rgb(154, 12, 12);
@@ -230,22 +228,22 @@ background: linear-gradient(0deg, rgba(7,7,7,1) 66%, rgba(19,9,28,1) 100%);
       }
       .headtop:before {
         content: "";
-        width: 99.5%;
-        height: 99%;
+        width: 98%;
+        height: 92%;
         margin: auto;
         background-color:rgb(59, 8, 17);
         display: block;
         position: absolute;
-         top: 3px;
-         bottom: 3px;  
-        left: 1px;
-        right: 4px;
+         top: 4px;
+         bottom: 4px;  
+        left: 2px;
+        right: 2px;
         z-index: -1;
       }
       .headtop,
       .headtop:before {
         -webkit-clip-path: polygon(5% 0, 100% 0, 100% 100%, 0 100%, 0 100%);
-        clip-path: polygon(10% 0%, 91% 0%, 100% 50%, 91% 100%, 10% 100%, 0% 55%);}
+        clip-path: polygon(7% 0%, 94% 0%, 100% 50%, 94% 100%, 7% 100%, 0% 55%);}
 
     
 @keyframes fadeLeft {

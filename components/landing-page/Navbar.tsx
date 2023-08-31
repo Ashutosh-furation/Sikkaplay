@@ -17,7 +17,10 @@ const Navbar: React.FC = () => {
       </div>
 
       <div className="flex justify-center px-8 items-center space-x-4 ">
-        <button className="text-white py-2 px-8 text-base rounded  bg-opacity-15  border-white border-[0.5px]">
+        <button className="text-white py-2 px-8 text-base
+         rounded 
+          bg-opacity-15 
+         border-white border-[0.5px]">
           Login
         </button>
         <button className="bg-white-500 text-base py-2 px-8   rounded bg-white text-[#ad0b40]  border-white border-[0.5px]">

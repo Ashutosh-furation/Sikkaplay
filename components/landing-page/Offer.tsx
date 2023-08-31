@@ -12,7 +12,7 @@ const Offer = () => {
       >
         <div className="m-10 border-yellow-600 headtop">
           <div className="flex items-center expl-text  justify-center py-[.6rem] lg:py-[1rem] border-yellow-500 ">
-            <h1 className="text-center text-[1.2rem] lg:text-3xl items-center">
+            <h1 className="text-center border-2 items-center  text-[1.2rem] lg:text-3xl ">
               {" "}
               Exclusive Offers{" "}
             </h1>

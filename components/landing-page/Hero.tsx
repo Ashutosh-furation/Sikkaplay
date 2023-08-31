@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
         className="bg-[url('/assets/hero/hero-background.svg')] 
       bg-center
        bg-no-repeat mobilesection  bg-[#0C0C0C]
-        w-[100vw] h-[90vh] "
+        w-[100vw]  h-[90vh] "
       >
         <div
           className="w-[100%] m-auto top-0
@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
           <Mobilenav />
         </div>
         <div className=" m-auto flex items-center justify-center">
-          <div className="m-auto  py-1 relative top-[10rem]">
+          <div className="m-auto  py-1 relative top-[4rem]">
             <Mobilehero />
           </div>
         </div>

@@ -19,7 +19,7 @@ const ChampionCard: React.FC = () => {
     // setActiveIndex(swiper.activeIndex);
      setActiveIndex(swiper.activeIndex);
   };
-  // console.log("active", activeIndex);
+  console.log("active", activeIndex);
 
   return (
     

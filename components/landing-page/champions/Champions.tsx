@@ -8,6 +8,7 @@ import gamelogo from "../../../public/assets/champs/Gamelogo.svg";
 import Champmd from "./Champmd";
  import AOS from "aos";
  import "aos/dist/aos.css"; 
+import Cardswiper from "@/components/swiper/Cardswiper";
 
 const Champions: React.FC = () => {
 
@@ -42,13 +43,18 @@ const Champions: React.FC = () => {
         </div>
       </div>
 
-      <div className="max-w-8xl  hidden md:block  py-[1rem] px-[1rem] m-auto border-yellow-500">
+      {/* <div className="max-w-8xl  hidden md:block  py-[1rem] px-[1rem] m-auto border-yellow-500">
         <ChampionCard />
       </div>
 
       <div className="max-w-8xl py-[1rem] px-[.2rem] m-auto border-yellow-500  champmediumsize">
         <Champmd />
       </div>
+       */}
+   <div>
+       <Cardswiper/>
+   </div>
+
     </div>
   );
 };
