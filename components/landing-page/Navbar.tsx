@@ -18,12 +18,12 @@ const Navbar: React.FC = () => {
 
       <div className="flex justify-center px-8 items-center space-x-4 ">
         <button className="text-white py-2 px-8 text-base
-         rounded 
+         rounded hover:bg-gradient-to-t from-[#AD0B40] to-[#FF1917] 
           bg-opacity-15 
-         border-white border-[0.5px]">
+        border border-white  hover:border-none transition-all duration-200 ease-in	delay-300">
           Login
         </button>
-        <button className="bg-white-500 text-base py-2 px-8   rounded bg-white text-[#ad0b40]  border-white border-[0.5px]">
+        <button className=" text-base py-2 px-8   rounded bg-white text-[#ad0b40]  border-white  hover:bg-gradient-to-t from-[#AD0B40] to-[#FF1917]  bg-opacity-15 hover:text-white hover:border-none">
           Sign Up
         </button>
       </div>

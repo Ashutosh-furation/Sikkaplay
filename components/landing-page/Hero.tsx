@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
           <Mobilenav />
         </div>
         <div className=" m-auto flex items-center justify-center">
-          <div className="m-auto  py-1 relative top-[4rem]">
+          <div className="m-auto  py-1 relative top-[.7rem]">
             <Mobilehero />
           </div>
         </div>
