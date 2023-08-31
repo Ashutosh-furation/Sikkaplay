@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
         className="bg-[url('/assets/hero/hero-background.svg')] 
       bg-center
        bg-no-repeat mobilesection  bg-[#0C0C0C]
-        w-[100vw] "
+        w-[100vw] h-[90vh] "
       >
         <div
           className="w-[100%] m-auto top-0

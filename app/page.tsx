@@ -9,8 +9,7 @@ import Champions from '@/components/landing-page/champions/Champions';
 
 export default function Home() {
   return (
-    <main >
-      <div className="overflow-x-hidden max-w-8xl">
+    <main className="overflow-hidden max-w-8xl">
         <Hero />
         <Game />
         <Explore />
@@ -19,7 +18,6 @@ export default function Home() {
         <Faq />
         <GameFeatures />
         <Footer />
-      </div>
     </main>
   );
 }

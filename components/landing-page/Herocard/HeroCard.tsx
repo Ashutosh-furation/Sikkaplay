@@ -5,26 +5,23 @@ import sikka from "../../../public/assets/hero/hero-heading.svg"
 import heroimage from "../../../public/assets/hero/hero-image.svg";
 import heroshadow from "../../../public/assets/hero/heroboxshadow.png";
 import AOS from 'aos';
-// import 'aos/dist/aos.css'; 
 
 const HeroCard = () => {
-      AOS.init()
-     useEffect(()=>{
-      AOS.init({
-        // offset: 200,
-        // duration: 600,
-        // easing: "ease-in-sine",
-        // delay: 100,
-      });
-     },[])
- 
+  // AOS.init();
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
+  /** data-aos="fade-right" aos-init aos-animate
+   *  data-aos="fade-left"
+   * aos-init aos-animate
+   */
 
   return (
     <div className="max-w-6xl relative sm:top-5  sm:py-[2rem]  sm:px-[.8rem] md:py-[1rem] md:px-[1.2rem] lg:py-[1rem] lg:px-[2rem] m-auto flex justify-between gap-4">
-      <div
-        data-aos="fade-right"
-        className="w-[60%] aos-init aos-animate m-auto border-yellow-500  "
-      >
+      
+      <div className="w-[60%]  m-auto border-yellow-500 fade-in-left ">
         <div
           className="
             w-[80%]
@@ -57,10 +54,7 @@ const HeroCard = () => {
         </div>
       </div>
 
-      <div
-        data-aos="fade-left"
-        className="w-[40%] aos-init aos-animate sm:pt-[1rem] md:pt-[1rem] lg:py-[1rem]  m-auto border-pink-500 "
-      >
+      <div className="w-[40%]  sm:pt-[1rem] md:pt-[1rem] lg:py-[1rem]  m-auto border-pink-500 fade-in-right ">
         <div className="heroshadow  relative top-[-60px] h-[1px] z-1">
           <Image src={heroshadow} alt="heroshadow" />
         </div>
@@ -70,6 +64,7 @@ const HeroCard = () => {
           </div>
         </div>
       </div>
+      
     </div>
   );
 }
