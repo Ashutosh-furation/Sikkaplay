@@ -97,21 +97,60 @@ body {
   );
  }
 
- .join-button:hover {
-  background: linear-gradient(
-   rgba(140, 31, 66, 1) 1%,
-rgb(139, 9, 9,5) 90% )
-
- }
-
-
 
  @media screen and (min-width: 640px) {
      .mobilesection{
        display: none;
      }
 }
+
+@media only screen and (max-width: 412px) and (min-width: 360px)  {
+       .mobilesection{
+        /* border: 2px solid green; */
+        padding-bottom: 20%;
+        padding-top: 7%;
+        /* height: 80vh; */
+       }
+       .mobilehero{
+        position: relative;
+       }
+       .heroimage{
+        width: 100%;
+       }
+         .sikka{
+        width: 90%;
+       }
+}
+
+@media only screen and (max-width: 530px) and (min-width: 413px)  {
+       .mobilehero{
+        /* border: 2px solid red; */
+        position: relative;
+        padding-bottom: 10%;
+        padding-top: 5%;
+       }
+       .mobilesection{
+         /* border: 2px solid yellow; */
+         padding: 3%;
+       }
+        .heroimage{
+        width: 75%;
+       }
+        .sikka{
+        width: 80%;
+       }
+
+     
+}
+
   
+@media only screen and (max-width: 350px) and (min-width: 320px)  {
+      
+        .sikka{
+        width: 50%;
+       }
+}
+
 
 .champ-con {
   border: .1px solid rgb(0, 0, 0);

@@ -15,7 +15,6 @@ const HeroCard = () => {
 
   return (
     <div className="max-w-6xl relative sm:top-5  sm:py-[2rem]  sm:px-[.8rem] md:py-[1rem] md:px-[1.2rem] lg:py-[1rem] lg:px-[2rem] m-auto flex justify-between gap-4">
-      
       <div className="w-[60%]  m-auto border-yellow-500 fade-in-left ">
         <div
           className="
@@ -43,7 +42,11 @@ const HeroCard = () => {
           </p>
         </div>
         <div className=" md:px-[.3rem] lg:px-[.5rem]   text-left border-pink-500">
-          <button className="text-white py-3 px-10 sm:text-sm text-lg rounded-[5px] join-button">
+          <button
+            className="text-white py-3 px-10 sm:text-sm text-lg rounded-[5px] join-button
+          hover:bg-gradient-to-t from-[#AD0B40] to-[#FF1917]  bg-opacity-15 hover:border-none transition-all duration-200 ease-in	delay-300
+          "
+          >
             Join Now!
           </button>
         </div>
@@ -59,7 +62,6 @@ const HeroCard = () => {
           </div>
         </div>
       </div>
-      
     </div>
   );
 }

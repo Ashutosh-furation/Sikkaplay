@@ -101,38 +101,53 @@ const Footer = () => {
             className="left-footer  basis-[50%] text-sm md:text-base lg:text-lg "
           >
             <div className="address py-5 text-left">
-              <h4 className="text-sm sm:text-base md:text-base lg:text-lg">Address:</h4>
-              <p className="text-sm sm:text-base md:text-base lg:text-lg">Level 1, 12 Sample St, Nepal</p>
+              <h4 className="text-sm sm:text-base md:text-base lg:text-lg">
+                Address:
+              </h4>
+              <p className="text-sm sm:text-base md:text-base lg:text-lg">
+                Level 1, 12 Sample St, Nepal
+              </p>
             </div>
             <div className="Contact-us  text-left">
-              <h4 className="text-sm sm:text-base md:text-base lg:text-lg">Contact:</h4>
+              <h4 className="text-sm sm:text-base md:text-base lg:text-lg">
+                Contact:
+              </h4>
               <a href="#" className="underline block">
                 1800 123 4567{" "}
               </a>
-              <a href="#" className="underline block">
-                info@relume.io
+              <a href="https://www.furation.tech/" className="underline block">
+                hello@Furation.tech
               </a>
             </div>
           </div>
-          <div
-            // data-aos="fade-up"
-            className="right-footer flex flex-wrap py-5 basis-[35%] sm:basis-[45%] text-sm md:text-base lg:text-lg justify-evenly "
-          >
-            <a href="#" className="basis-full  sm:text-left md:text-right text-sm sm:text-base md:text-base lg:text-lg">
-            Privacy Policy
+          <div className="right-footer flex flex-wrap py-5 basis-[35%] sm:basis-[45%] text-sm md:text-base lg:text-lg justify-evenly ">
+            <a
+              href="#"
+              className="basis-full  sm:text-left md:text-right text-sm sm:text-base md:text-base lg:text-lg"
+            >
+              Privacy Policy
             </a>
-            <a href="#" className="basis-full  sm:text-left md:text-right text-sm sm:text-base md:text-base lg:text-lg">
-            Terms of Service
+            <a
+              href="#"
+              className="basis-full  sm:text-left md:text-right text-sm sm:text-base md:text-base lg:text-lg"
+            >
+              Terms of Service
             </a>
-            <a href="#" className="basis-full  sm:text-left md:text-right text-sm sm:text-base md:text-base lg:text-lg">
-            Cookies Settings
+            <a
+              href="#"
+              className="basis-full  sm:text-left md:text-right text-sm sm:text-base md:text-base lg:text-lg"
+            >
+              Cookies Settings
             </a>
           </div>
         </div>
 
         <hr className="w-[95%] mx-auto bg-slate-400" />
-        <h3  className="text-sm text-center py-8">
-          © 2023 Relume. All rights reserved.
+        <h3 className="text-sm text-center py-8">
+          © 2023 Sikka play. All rights reserved. |
+          <a href="https://www.furation.tech/" >
+             Developed By: Furation Tech Solutions Pvt.Ltd.
+          </a>
         </h3>
       </div>
     </footer>

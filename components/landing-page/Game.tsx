@@ -14,7 +14,7 @@ const Game = () => {
 
 
   return (
-    <div className="bg-[#0C0C0C]  relative w-[100vw]  py-12 px-3 text-white">
+    <div className="bg-[#0C0C0C] border-none relative w-[100vw]  py-12 px-3 text-white">
       <div className="py-[2rem] px-6 md:px-1 lg:px-1  flex items-center justify-center px-auto">
         <div className="m-10   py-[.2rem] border-yellow-600 headtop">
           <div className="flex  border-green-700 items-center  justify-center ">
@@ -40,7 +40,7 @@ const Game = () => {
         className="w-14 sm:w-16 sm:h-16 lg:w-24 h-12 lg:h-24  top-8 left-1 absolute"
       />
 
-      <div className="game-card-container max-w-8xl m-auto  grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7   my-3 lg:my-12 sm:my-6  sm:justify-between sm:px-2  ">
+      <div className="game-card-container max-w-8xl m-auto  grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-7   my-3 lg:my-12 sm:my-6  sm:justify-between sm:px-2  ">
         {GameCardDetails.map((card) => {
           return (
             <div

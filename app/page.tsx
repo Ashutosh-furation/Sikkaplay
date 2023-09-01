@@ -1,3 +1,4 @@
+
 import Explore from '@/components/landing-page/Explore';
 import Faq from '@/components/landing-page/Faq';
 import Footer from '@/components/landing-page/Footer';
@@ -10,7 +11,7 @@ import Champions from '@/components/landing-page/champions/Champions';
 export default function Home() {
   return (
     <main className="overflow-hidden max-w-8xl">
-        <Hero />
+        <Hero/>
         <Game />
         <Explore />
         <Offer />

@@ -29,7 +29,7 @@ const ChampionCard: React.FC = () => {
         slidesPerView={1}
         spaceBetween={35}
         navigation={true}
-        centeredSlides={true}
+          centeredSlides={true}
         initialSlide={1}
         onSlideChange={handleSlideChange}
         pagination={{

@@ -3,7 +3,10 @@ import React from "react";
 
 const GameFeatures = () => {
   return (
-    <section className="feature text-white flex flex-wrap justify-evenly p-20 bg-[#150e1c] gap-4 ">
+    <section
+      data-aos="fade-up"
+      className="feature text-white flex flex-wrap justify-evenly p-20 bg-[#150e1c] gap-4 "
+    >
       {GameFeature.length > 0 &&
         GameFeature.map((feature) => {
           return (

@@ -10,11 +10,11 @@ import herobackground from "../../public/assets/hero/hero-background.svg";
 const Hero: React.FC = () => {
   return (
     <section>
-      <section
+      <div
         className="bg-[url('/assets/hero/hero-background.svg')] 
       bg-center
        bg-no-repeat mobilesection  bg-[#0C0C0C]
-        w-[100vw]  h-[90vh]  "
+        w-[100vw]    "
       >
         <div
           className="w-[100%] m-auto top-0
@@ -29,12 +29,10 @@ const Hero: React.FC = () => {
             <Mobilehero />
           </div>
         </div>
-      </section>
-
-  
+      </div>
 
       <div className="w-[100%] hidden sm:block  relative  ">
-        <div className="z-0 w-full   border-yellow-600 bg-[#0C0C0C]  object-cover">
+        <div className="z-0 w-full border-[.1px]  border-[#0C0C0C] bg-[#0C0C0C]  object-cover">
           <Image
             src={herobackground}
             alt="hero-background"

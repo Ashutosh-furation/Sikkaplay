@@ -55,3 +55,19 @@ body {
     background: #a90b0b;
 }
 
+
+.custom-next{
+   background-color: transparent;
+  background-image: url('/path-to-your-next-arrow-icon.png');
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+}
+.custom-prev {
+  background-color: transparent;
+  background-image: url('/path-to-your-next-arrow-icon.png');
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+}
+
