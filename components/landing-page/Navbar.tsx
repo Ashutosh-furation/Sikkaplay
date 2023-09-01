@@ -7,12 +7,9 @@ import Image from "next/image";
 const Navbar: React.FC = () => {
   return (
     <nav className="mx-auto  px-[1.2rem]  items-center flex justify-between shape">
-      {/* <div className="flex px-[1rem] justify-center items-center">
-        <GiHamburgerMenu className="text-2xl   text-white cursor-pointer" />
-      </div> */}
-
+   
      
-        <div className=" px-2 flex justify-center items-center  w-[35%]  border-red-600">
+        <div className=" px-2 flex justify-center items-center sm:w-[26%]  lg:w-[25%]  border-red-600">
           <Image src={sikka} alt={"logo"} className="mb-2" />
         </div>
     
