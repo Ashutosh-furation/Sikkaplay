@@ -6,8 +6,8 @@ import heroshadow from "../../../public/assets/hero/heroboxshadow.png";
 
 const Mobilehero = () => {
   return (
-    <div className="max-w-4xl  px-2 border-yellow-700   mobilehero ">
-      <div className="w-[100%]   mx-auto  px-1 py-10 pb-[25%] border-red-600 mobilepadding">
+    <div className="max-w-4xl   border-yellow-700   mobilehero ">
+      <div className="w-[100%]  mx-auto  px-1  py-20 pb-[20%]  mobilepadding">
 
         <div className=" border-green-600">
           <div className="heroshadow  relative top-[-90px] h-[1px] z-1">
@@ -17,10 +17,10 @@ const Mobilehero = () => {
             <Image
               src={heroimage}
               alt="Image"
-              className="w-[90%]  m-auto heroimage"
+              className="w-[50%]  m-auto heroimage"
             />
           </div>
-          <div className="w-[80%] sikka  m-auto ">
+          <div className="w-[50%] sikka  m-auto ">
             <Image src={sikka} alt="Sikkafont" className="  m-auto" />
           </div>
         </div>

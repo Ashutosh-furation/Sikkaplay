@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
       >
         <div
           className="w-[100%] m-auto top-0
-          fixed z-20 border-red-500 
+          fixed z-20  border-red-500 
           bg-[url('/assets/hero/Navboxshadow.svg')]
            py-[.7rem]  px-[1rem]  "
         >
@@ -42,9 +42,9 @@ const Hero: React.FC = () => {
         <div className="z-10  border-green-600 absolute inset-0 text-6xl text-white ">
           <div
             className=" w-[100%]
-          fixed z-20
+          fixed z-20 
           main-nav-con
-           py-[1rem] opacity-2 rounded-lg"
+           py-[1rem] opacity-6 rounded-lg"
           >
             <div>
               <Navbar />

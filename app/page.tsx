@@ -1,4 +1,5 @@
 
+import Newhero from '@/components/Newhero';
 import Explore from '@/components/landing-page/Explore';
 import Faq from '@/components/landing-page/Faq';
 import Footer from '@/components/landing-page/Footer';
