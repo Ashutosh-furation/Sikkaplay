@@ -1,10 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
+interface StepfirProps {
+  SetCurrentStep: React.Dispatch<React.SetStateAction<number>>;
+}
 
-const StepThird: React.FC = () => {
 
-    
+const StepThird: React.FC<StepfirProps> = () => {
   return (
     <div className="w-[100%] py-2  border-yellow-400">
       <label htmlFor="phone" className="text-white  px-2 text-sm">

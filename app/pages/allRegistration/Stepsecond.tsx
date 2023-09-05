@@ -2,7 +2,12 @@
 
 import React, { useState } from "react";
 
-const Stepsecond: React.FC = () => {
+interface StepfirProps {
+  SetCurrentStep: React.Dispatch<React.SetStateAction<number>>;
+}
+
+
+const Stepsecond: React.FC<StepfirProps> = () => {
   return (
     <div className="w-[100%] py-2  border-yellow-400">
       <div className=" border-yellow-500 gap-2 flex justify-between">
@@ -92,7 +97,7 @@ const Stepsecond: React.FC = () => {
       <div className="px-2">
         <div className="py-2 px-2  mt-5  bg-[#636363] flex items-center justify-center border-yellow-600 rounded-md">
           <button className="text-white py-1 px-2 md:font-semibold text-sm text-center ">
-           One more step to go !
+            One more step to go !
           </button>
         </div>
       </div>
