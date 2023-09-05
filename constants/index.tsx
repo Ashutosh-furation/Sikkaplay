@@ -172,3 +172,45 @@ export const Championsdata = [
 ];
 
 
+export const UserAvatardata = [
+  {
+    id: 1,
+    cardImage: "/assets/Avtar/upload.svg",
+    cardName: "upload",
+  },
+  {
+    id: 2,
+    cardImage: "/assets/Avtar/image 96.svg",
+    cardName: "Avatar 1",
+  },
+  {
+    id: 3,
+    cardImage: "/assets/Avtar/image 97.svg",
+    cardName: "Avatar 2",
+  },
+  {
+    id: 4,
+    cardImage: "/assets/Avtar/image 98.svg",
+    cardName: "Avatar 3",
+  },
+  {
+    id: 5,
+    cardImage: "/assets/Avtar/image 99.svg",
+    cardName: "Avatar 4",
+  },
+  {
+    id: 6,
+    cardImage: "/assets/Avtar/image 100.svg",
+    cardName: "Avatar 5",
+  },
+  {
+    id: 7,
+    cardImage: "/assets/Avtar/image 101.svg",
+    cardName: "Avatar 6",
+  },
+  {
+    id: 8,
+    cardImage: "/assets/Avtar/image 102.svg",
+    cardName: "Avatar 7",
+  },
+];
