@@ -3,10 +3,16 @@
 import React, { useState } from "react";
 interface StepfirProps {
   SetCurrentStep: React.Dispatch<React.SetStateAction<number>>;
+  currentStep:number;
+ steps:string[];
 }
 
 
-const Stepfir: React.FC<StepfirProps> = ({ SetCurrentStep }) => {
+const Stepfir: React.FC<StepfirProps> = ({
+  SetCurrentStep,
+  currentStep,
+  steps,
+}) => {
   return (
     <div className="w-[100%] py-2  border-yellow-400">
       <label htmlFor="phone" className="text-white    px-2 text-sm">
@@ -41,8 +47,12 @@ const Stepfir: React.FC<StepfirProps> = ({ SetCurrentStep }) => {
       </div>
       <div className="px-2">
         <div className="py-2 px-2  mt-5  bg-[#636363] flex items-center justify-center border-yellow-600 rounded-md">
-          <button className="text-white py-1 px-2 font-semibold text-sm text-center "
-          onClick={()=>{SetCurrentStep((prev)=> prev+1)}}
+          <button
+            className="text-white py-1 px-2 font-semibold text-sm text-center "
+            onClick={() => {
+              SetCurrentStep((prev) => prev + 1);
+            }}
+            disabled={currentStep === steps.length - 1}
           >
             Next
           </button>

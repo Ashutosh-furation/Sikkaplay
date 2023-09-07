@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from 'react'
 import OtpInput from "otp-input-react";
 const Enterotp = () => {
@@ -14,17 +15,20 @@ const [user, setUser] = useState(null);
         Email OTP
       </label>
 
-      <div className="flex justify-between py-1 px-2 border-red-700 items-center">
+      <div className="flex  border-2 py-1 px-2 border-red-700 items-center">
         <OtpInput
           value={otp}
           onChange={setOtp}
           background="#1E1E1E"
+          placeholder={["-", "-"]}
           OTPLength={6}
           otpType="number"
           disabled={false}
-          width={100}
           autoFocus
-          className="opt-container"
+          className=""
+          containerStyle={{
+            width: "300px", // Set the width as per your requirement
+          }}
         ></OtpInput>
       </div>
 

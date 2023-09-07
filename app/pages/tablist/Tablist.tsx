@@ -1,9 +1,9 @@
-
-'use client'
+"use client";
 import React, { useState } from "react";
 import PhoneNumber from "../phonenumber/PhoneNumber";
 import EmailLogin from "../EmailLogin/EmailLogin";
-import Enterotp from "../EnterOTP/Enterotp";
+
+import VerifyField from "../EnterOTP/VerifyFeild";
 
 
 const Tablist = () => {
@@ -13,13 +13,12 @@ const Tablist = () => {
     setActiveTab(tab);
   };
 
-
   return (
-    <div className="w-[100%]   border-green-500  mx-auto p-2">
+    <div className="w-[100%]  border-green-500  mx-auto p-2">
       <div className="flex ">
         <button
           onClick={() => handleTabChange("login")}
-          className={`w-full  py-1 text-sm font-semibold focus:outline-none ${
+          className={`w-full  py-2 text-sm  focus:outline-none ${
             activeTab === "login"
               ? "text-red-500 border-b border-red-500"
               : "text-gray-500"
@@ -29,7 +28,7 @@ const Tablist = () => {
         </button>
         <button
           onClick={() => handleTabChange("signup")}
-          className={`w-full  py-2 text-sm font-semibold focus:outline-none ${
+          className={`w-full  py-2 text-sm  focus:outline-none ${
             activeTab === "signup"
               ? "text-red-500 border-b border-red-500"
               : "text-gray-500"
@@ -41,14 +40,15 @@ const Tablist = () => {
 
       <div className="mt-4">
         {activeTab === "login" && (
-          <div className="py-2">
-             <PhoneNumber/>
+          <div className="py-2 ">
+           <PhoneNumber/>
+            {/* <VerifyField/> */}
           </div>
         )}
 
         {activeTab === "signup" && (
-          <div className="py-2">
-           <EmailLogin/>
+          <div className="py-2 ">
+            <EmailLogin />
           </div>
         )}
       </div>

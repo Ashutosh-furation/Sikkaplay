@@ -6,14 +6,14 @@ import sikklogo from "../../../public/assets/users/sikkuserlogo.svg";
 import Acelocked from "../../../public/assets/users/Bottomborder.svg";
 import Image from "next/image";
 import {UserAvatardata} from "../../../constants/index"
-import avatar from "../../../public/assets/Avtar/image 100.svg"
 
 const page = () => {
 
     
   return (
     <div className="overflow-hidden max-w-8xl  px-2 py-2 pb-[2%] md:py-[8%] lg:py-[4%] bg-[#000000] bg-[url('/assets/users/userbackground.svg')]  border-green-700">
-      <div className="w-[30%]  py-4  lg:w-[12%] md:w-[25%]  flex items-center justify-center m-auto  border-green-600">
+
+      <div className="w-[50%]  py-4  lg:w-[12%] md:w-[25%]  flex items-center justify-center m-auto  border-green-600">
         <Image src={sikklogo} alt="sikka" />
       </div>
 
@@ -54,15 +54,12 @@ const page = () => {
           
         </div>
 
-        {/** avatar  */}
-
-        {/** border bottom */}
-
-        <div className="w-[80%] m-auto  py-[5%] sm:py-[10] md:py-[8%] lg:py-7 px-2 flex items-center justify-center  border-yellow-500">
+    
+        <div className="w-[80%] m-auto py-[5%] sm:py-[10] md:py-[8%] lg:py-7 px-2 flex items-center justify-center  border-yellow-500">
           <Image
             src={Acelocked}
             alt="Acelocked"
-            className="text-white color-white"
+            className="text-white color-white pt-10 sm:pt-5"
           />
         </div>
       </div>
