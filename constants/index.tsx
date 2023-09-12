@@ -86,14 +86,14 @@ export const GameFeature = [
       "Players must be minimum 18 years of age to play real money rummy games. This game may be habit-forming or financially risky. Play responsibly.",
   },
   {
-    id: 1,
+    id: 2,
     featureLogo: "/assets/gameFeature/gameFeatureImage2.svg",
     featureHeading: "Secured Payment Partners",
     featurePara:
       "Secured payment partners ensure safe transactions on Sikka Play, a game website, enhancing user trust and financial protection.",
   },
   {
-    id: 1,
+    id: 3,
     featureLogo: "/assets/gameFeature/gameFeatureImage3.svg",
     featureHeading: "100% Legal",
     featurePara:
@@ -172,6 +172,55 @@ export const Championsdata = [
 ];
 
 
+export const UserAvatar = [
+  {
+    id: 1,
+    cardImage: "/assets/Avtar/upload.svg",
+    cardName: "upload",
+  },
+  {
+    id: 2,
+    cardImage: "/assets/Avtar/Group 1000006638.svg",
+    cardName: "Avatar 1",
+  },
+  {
+    id: 3,
+    cardImage: "/assets/Avtar/Group 1000006640.svg",
+    cardName: "Avatar 2",
+  },
+  {
+    id: 4,
+    cardImage: "/assets/Avtar/Group 1000006642.svg",
+    cardName: "Avatar 3",
+  },
+  {
+    id: 5,
+    cardImage: "/assets/Avtar/Group 1000006643.svg",
+    cardName: "Avatar 4",
+  },
+  {
+    id: 6,
+    cardImage: "/assets/Avtar/Group 1000006646.svg",
+    cardName: "Avatar 5",
+  },
+  {
+    id: 7,
+    cardImage: "/assets/Avtar/Group 1000006647.svg",
+    cardName: "Avatar 6",
+  },
+  {
+    id: 8,
+    cardImage: "/assets/Avtar/Group 1000006652.svg",
+    cardName: "Avatar 7",
+  },
+  {
+    id: 9,
+    cardImage: "/assets/Avtar/Group 1000006658.svg",
+    cardName: "Avatar 8",
+  },
+];
+
+
 export const UserAvatardata = [
   {
     id: 1,
@@ -214,6 +263,7 @@ export const UserAvatardata = [
     cardName: "Avatar 7",
   },
 ];
+
 const countryCodes = [
   {
     code: "+1",

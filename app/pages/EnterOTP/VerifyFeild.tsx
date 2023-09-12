@@ -25,7 +25,7 @@ const VerifyField: FC<Props> = (props): JSX.Element => {
         setOtp(newOTP)
   }
 
-  console.log("otp",otp)
+  // console.log("otp",otp)
 
   const handleKeydown = ({key}: React.KeyboardEvent<HTMLInputElement> , index:number) => {
       if(key === 'Backspace' ){
@@ -36,6 +36,22 @@ const VerifyField: FC<Props> = (props): JSX.Element => {
   useEffect(()=>{
    inputRef.current?.focus()
   },[activeotpindex])
+
+   const calculateButtonColor = (input: string) => {
+     if (input.length < 10) {
+       return "bg-[#636363]";
+     } else {
+       return "bg-gradient-to-t from-[#AD0B40] to-[#FF1917]";
+     }
+   };
+
+  //  const handlePhoneNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //    const newPhoneNumber = e.target.value;
+  //    setOtp(newPhoneNumber);
+  //  };
+  //  const buttonColor = calculateButtonColor(otp);
+
+     
 
   return (
     <>

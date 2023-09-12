@@ -20,7 +20,7 @@ const Tablist = () => {
           onClick={() => handleTabChange("login")}
           className={`w-full  py-2 text-sm  focus:outline-none ${
             activeTab === "login"
-              ? "text-red-500 border-b border-red-500"
+              ? "text-[#CA2446] border-b border-b-[#ca2446]"
               : "text-gray-500"
           }`}
         >
@@ -30,7 +30,7 @@ const Tablist = () => {
           onClick={() => handleTabChange("signup")}
           className={`w-full  py-2 text-sm  focus:outline-none ${
             activeTab === "signup"
-              ? "text-red-500 border-b border-red-500"
+              ? "text-[#CA2446] border-b border-b-[#ca2446]"
               : "text-gray-500"
           }`}
         >
@@ -41,8 +41,7 @@ const Tablist = () => {
       <div className="mt-4">
         {activeTab === "login" && (
           <div className="py-2 ">
-           <PhoneNumber/>
-            {/* <VerifyField/> */}
+            <PhoneNumber />
           </div>
         )}
 

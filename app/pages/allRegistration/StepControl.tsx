@@ -17,7 +17,7 @@ const StepControl: React.FC<StepfirProps> = ({
   steps,
 }) => {
   return (
-    <div className=" border-red-800">
+    <div className=" px-2 border-red-800">
       <Stepper currentStep={currentStep} steps={steps} />
 
       {currentStep === 1 && (

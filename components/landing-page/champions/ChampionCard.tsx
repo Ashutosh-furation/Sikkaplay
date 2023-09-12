@@ -30,10 +30,10 @@ const ChampionCard: React.FC = () => {
         spaceBetween={35}
         navigation={true}
         centeredSlides={true}
-        autoplay={{
-          delay: 1000,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 1000,
+        //   disableOnInteraction: false,
+        // }}
         initialSlide={1}
         onSlideChange={handleSlideChange}
         pagination={{

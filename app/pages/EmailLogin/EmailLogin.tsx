@@ -6,45 +6,74 @@ import Image from "next/image";
 import googlelogo from "../../../public/assets/users/gogle.svg";
 import Applelogo from "../../../public/assets/users/Apple.svg";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
-
+import { logIn, logOut } from "../../../store/features/auth-slice";
+import { useDispatch } from "react-redux";
+import { AppDispatch, useAppSelector } from "@/store/store";
+import { useSelector } from "react-redux";
+interface FormData {
+  phoneNumber: string;
+  email: string;
+  password: string;
+}
 
 const EmailLogin: React.FC = () => {
- const [passwordVisible, setPasswordVisible] = useState(false);
- const [formData, setFormData] = useState({
-   email: "",
-   password: "",
- });
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const userdata = useAppSelector((state) => state.authReducer.value);
+  console.log("data", userdata);
 
- const togglePasswordVisibility = () => {
-   setPasswordVisible(!passwordVisible);
- };
+  const [username, SetUserName] = useState("");
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+  const dispatch = useDispatch<AppDispatch>();
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
+  };
 
- const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-   const { name, value } = e.target;
-   setFormData({
-     ...formData,
-     [name]: value,
-   });
- };
-  
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  //  console.log("data",formData)
+
+  const handleLogin = () => {
+    dispatch(logIn(username));
+  };
+  console.log("username", username);
+
+  const isFormValid = () => {
+    const { email, password } = formData;
+    return email.trim() !== "" && password.trim() !== "";
+  };
+
   return (
-    <div className="w-[100%]">
-      <label htmlFor="phone" className="text-white m-1  px-1 text-sm">
+    <div className="w-[100%] px-2">
+      <h1 className="text-white">{userdata?.username} </h1>
+      <label htmlFor="phone" className="text-white m-1   text-sm">
         Email address
       </label>
-      <div className="flex justify-between py-1 px-2 border-red-700 items-center">
+      <div className="flex justify-between py-1  border-red-700 items-center">
         <input
-          type="email"
+          // type="email"
+          // name="email"
+          type="text"
+          onChange={(e) => SetUserName(e.target.value)}
           className="w-full text-white px-4 bg-[#1E1E1E]
            border-red-600  p-2 rounded "
           placeholder=" Email Address"
+          // onChange={handleInputChange}
         />
       </div>
-      <label htmlFor="password" className="text-white m-1  px-1 text-sm">
+      <label htmlFor="password" className="text-white m-1   text-sm">
         Password
       </label>
-     
-      <div className="relative  px-2 border-red-500">
+
+      <div className="relative py-1  border-red-500">
         <input
           id="password"
           name="password"
@@ -52,10 +81,10 @@ const EmailLogin: React.FC = () => {
           autoComplete="current-password"
           required
           className="appearance-none  relative block
-           w-full px-6 py-2 bg-[#1E1E1E] 
+           w-full px-4 py-2 bg-[#1E1E1E] 
               border-none
-              text-white  p-2 rounded-lg
-               z-10 sm:text-sm"
+              text-white  p-2 rounded
+               z-10 "
           placeholder="Password"
           onChange={handleInputChange}
         />
@@ -66,8 +95,7 @@ const EmailLogin: React.FC = () => {
         >
           <button
             type="button"
-            className="text-white
-             focus:outline-none focus:ring focus:ring-opacity-50"
+            className="text-white"
             onClick={togglePasswordVisibility}
           >
             {passwordVisible ? (
@@ -78,8 +106,19 @@ const EmailLogin: React.FC = () => {
           </button>
         </div>
       </div>
-      <div className="py-2 px-2 mt-5  bg-[#636363] flex items-center justify-center border-yellow-600 rounded-md">
-        <button className="text-white py-1 px-2 font-semibold text-sm text-center ">
+      <div
+        onClick={handleLogin}
+        className={`py-2 px-2 mt-5 
+         ${
+           isFormValid()
+             ? "bg-gradient-to-t from-[#AD0B40] to-[#FF1917]"
+             : "bg-[#636363]"
+         }
+       flex items-center justify-center border-yellow-600 rounded-md`}
+      >
+        <button
+          className={`text-white py-1 px-2 font-semibold text-sm text-center `}
+        >
           Login
         </button>
       </div>
@@ -87,30 +126,37 @@ const EmailLogin: React.FC = () => {
       <div className="px-2 py-4 flex items-center justify-center border-yellow-600 rounded-md">
         <Image src={orline} alt="orline" />
       </div>
+
       <div className=" py-2">
-        <div className="py-1 bg-[#1E1E1E] flex items-center justify-center border-yellow-600 rounded-md">
+        <div className="py-2 bg-[#1E1E1E] flex items-center justify-center border-yellow-600 rounded-md">
           <div className="py-1 px-2 flex justify-between gap-2 border-red-600">
             <Image src={googlelogo} alt="googlelogo" />
-            <h2 className="text-white"> Continue with Google </h2>
+            <h2 className="text-white text-center m-auto text-sm">
+              {" "}
+              Continue with Google{" "}
+            </h2>
           </div>
         </div>
       </div>
 
       <div className="py-2">
-        <div className=" py-1  bg-[#1E1E1E] flex items-center justify-center border-yellow-600 rounded-md">
-          <div className=" py-1 px-2 flex justify-between gap-2 border-red-600">
+        <div className=" py-2  bg-[#1E1E1E] flex items-center justify-center border-yellow-600 rounded-md">
+          <div className="py-1 px-2 flex justify-between gap-2 border-red-600">
             <Image src={Applelogo} alt="Applelogo" />
-            <h2 className="text-white"> Continue with Apple </h2>
+            <h2 className="text-white text-center m-auto text-sm">
+              {" "}
+              Continue with Apple{" "}
+            </h2>
           </div>
         </div>
       </div>
 
       <div className="py-5 px-2 flex items-center justify-center border-yellow-600 rounded-md">
         <div className="flex justify-between gap-2 border-red-600">
-          <h2 className="text-[#1E1E1E] text-sm sm:text-base font-semibold">
+          <h2 className="text-[#636363] text-sm sm:text-base font-normal">
             Don't have an account?{" "}
           </h2>
-          <h2 className="text-red-500 text-sm sm:text-base underline block">
+          <h2 className="text-[#CA2446] text-sm font-normal sm:text-base underline block">
             {" "}
             SignUp{" "}
           </h2>

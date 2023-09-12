@@ -7,8 +7,6 @@ import googlelogo from "../../../public/assets/users/gogle.svg"
 import Applelogo from "../../../public/assets/users/Apple.svg";
 import {CountryPhonecodedata} from "../../../constants/index"
 
-
-
 const countryCodes = [
   {
     code: "+1",
@@ -94,7 +92,7 @@ const PhoneNumber: React.FC = () => {
 
         <input
           type="tel"
-          className="w-full text-white px-4 bg-[#1E1E1E] border-red-600 sm:w-2/3 p-2 rounded "
+          className="w-full text-white text-sm px-4 bg-[#1E1E1E] border-red-600 sm:w-2/3 p-2 rounded "
           placeholder="Phone Number"
           value={phoneNumber}
           onChange={handlePhoneNumberChange}
@@ -104,7 +102,7 @@ const PhoneNumber: React.FC = () => {
         className={`py-2 px-2 mt-5 ${buttonColor} flex items-center 
        justify-center border-yellow-600 rounded-md`}
       >
-        <button className="text-white py-1 px-2 font-semibold text-sm text-center">
+        <button className="text-white py-1 px-2 font-normal text-sm text-center">
           {" "}
           Get OTP{" "}
         </button>
@@ -115,29 +113,37 @@ const PhoneNumber: React.FC = () => {
       </div>
 
       <div className=" py-2">
-        <div className="py-1 bg-[#1E1E1E] flex items-center justify-center border-yellow-600 rounded-md">
+        <div className="py-2 bg-[#1E1E1E] flex items-center justify-center border-yellow-600 rounded-md">
           <div className="py-1 px-2 flex justify-between gap-2 border-red-600">
             <Image src={googlelogo} alt="googlelogo" />
-            <h2 className="text-white"> Continue with Google </h2>
+            <h2 className="text-white text-center m-auto text-sm">
+              {" "}
+              Continue with Google{" "}
+            </h2>
           </div>
         </div>
       </div>
 
       <div className="py-2">
-        <div className=" py-1  bg-[#1E1E1E] flex items-center justify-center border-yellow-600 rounded-md">
-          <div className=" py-1 px-2 flex justify-between gap-2 border-red-600">
+        <div className=" py-2  bg-[#1E1E1E] flex items-center justify-center border-yellow-600 rounded-md">
+          <div className="py-1 px-2 flex justify-between gap-2 border-red-600">
             <Image src={Applelogo} alt="Applelogo" />
-            <h2 className="text-white"> Continue with Apple </h2>
+            <h2 className="text-white text-center m-auto text-sm">
+              {" "}
+              Continue with Apple{" "}
+            </h2>
           </div>
         </div>
       </div>
 
       <div className="py-5 px-2 flex items-center justify-center border-yellow-600 rounded-md">
         <div className="flex justify-between gap-2 border-red-600">
-          <h2 className="text-[#1E1E1E] text-sm sm:text-base font-semibold">
+          <h2 className="text-[#636363] text-sm sm:text-base font-normal">
             Don't have an account?{" "}
           </h2>
-          <h2 className="text-red-500 text-sm sm:text-base underline block">
+          <h2
+            className="text-[#CA2446] text-sm font-normal sm:text-base underline block"
+          >
             {" "}
             SignUp{" "}
           </h2>

@@ -4,44 +4,66 @@
 import { useState } from "react";
 import {AiFillEye, AiFillEyeInvisible} from "react-icons/ai"
 
+interface FormData {
+  phoneNumber: string;
+  email: string;
+  password: string;
+}
+
 const page = () => {
-  // State variables
-  const [phoneNumber, setPhoneNumber] = useState("");
+const [formData, setFormData] = useState<FormData>({
+  phoneNumber: "",
+  email: "",
+  password: "",
+});
 
-  // Function to calculate the button background color based on phone number length
-  const calculateButtonColor = (input: string) => {
-    if (input.length < 10) {
-      return "bg-red-500"; // Change to red background if length < 10
-    } else {
-      return "bg-green-500"; // Change to green background if length >= 10
-    }
-  };
+const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const { name, value } = e.target;
+  setFormData((prevData) => ({
+    ...prevData,
+    [name]: value,
+  }));
+};
 
-  // Function to handle phone number input change
-  const handlePhoneNumberChange = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    const newPhoneNumber = event.target.value;
-    setPhoneNumber(newPhoneNumber);
-  };
-
-  // Calculate the button background color based on the current phone number
-  const buttonColor = calculateButtonColor(phoneNumber);
-
+const isFormValid = () => {
+  const { phoneNumber, email, password } = formData;
+  return (
+    phoneNumber.trim() !== "" && email.trim() !== "" && password.trim() !== ""
+  );
+};
   return (
     <div>
       <input
         type="text"
-        value={phoneNumber}
-        onChange={handlePhoneNumberChange}
+        name="phoneNumber"
+        value={formData.phoneNumber}
+        onChange={handleInputChange}
         placeholder="Enter phone number"
         className="border p-2"
       />
+      <input
+        type="email"
+        name="email"
+        value={formData.email}
+        onChange={handleInputChange}
+        placeholder="Enter email"
+        className="border p-2"
+      />
+      <input
+        type="password"
+        name="password"
+        value={formData.password}
+        onChange={handleInputChange}
+        placeholder="Enter password"
+        className="border p-2"
+      />
       <button
-        className={`text-white p-2 rounded ${buttonColor}`}
-        disabled={phoneNumber.length < 10}
+        className={`text-white p-2 rounded ${
+          isFormValid() ? "bg-green-500" : "bg-gray-300"
+        }`}
+        // disabled={!isFormValid()}
       >
-        Submit
+        Sign Up
       </button>
     </div>
   );
@@ -50,7 +72,44 @@ const page = () => {
 export default page;
 
 /**
- * 
+ *  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
+
+    // Update the respective state variable based on the input field name
+    switch (name) {
+      case "phoneNumber":
+        setPhoneNumber(value);
+        break;
+      case "email":
+        setEmail(value);
+        break;
+      case "password":
+        setPassword(value);
+        break;
+      default:
+        break;
+    }
+
+    // Calculate the button background color
+    if (phoneNumber !== "" && email !== "" && password !== "") {
+      setButtonColor("bg-green-500"); // Change to your desired color
+    } else {
+      setButtonColor("bg-gray-300");
+    }
+  };
+ * const calculateButtonColor = () => {
+  if (phoneNumber !== "" && email !== "" && password !== "") {
+    setButtonColor("bg-green-500"); // Change to your desired color
+  } else {
+    setButtonColor("bg-gray-300");
+  }
+};
+
+// Effect to update the button color whenever any input field changes
+useEffect(() => {
+  calculateButtonColor();
+}, [phoneNumber, email, password]);
+
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [formData, setFormData] = useState({
     email: "",

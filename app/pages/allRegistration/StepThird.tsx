@@ -1,4 +1,4 @@
-"use client";
+
 
 import React, { useState } from "react";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
@@ -12,24 +12,31 @@ interface StepfirProps {
 const StepThird: React.FC<StepfirProps> = ({ SetCurrentStep, currentStep,steps }) => {
  const [passwordVisible, setPasswordVisible] = useState(false);
  const [formData, setFormData] = useState({
-   email: "",
-   password: "",
+   createpassword: "",
+   confirmpassword: "",
  });
 
  const togglePasswordVisibility = () => {
    setPasswordVisible(!passwordVisible);
  };
 
- const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-   const { name, value } = e.target;
-   setFormData({
-     ...formData,
-     [name]: value,
-   });
- };
+const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const { name, value } = e.target;
+  setFormData({
+    ...formData,
+    [name]: value,
+  });
+};
+
+const isFormValid = () => {
+  const { createpassword, confirmpassword } = formData;
+  return (
+    createpassword.trim() !== "" && confirmpassword.trim() 
+  );
+};
 
   return (
-    <div className="w-[100%] py-2  border-yellow-400">
+    <div className="w-[100%] px-6 py-2  border-yellow-400">
       <label htmlFor="phone" className="text-white  px-2 text-sm">
         Create Password
       </label>
@@ -37,7 +44,7 @@ const StepThird: React.FC<StepfirProps> = ({ SetCurrentStep, currentStep,steps }
       <div className="relative py-2 px-2 border-red-500">
         <input
           id="password"
-          name="password"
+          name="createpassword"
           type={passwordVisible ? "text" : "password"}
           autoComplete="current-password"
           required
@@ -75,7 +82,7 @@ const StepThird: React.FC<StepfirProps> = ({ SetCurrentStep, currentStep,steps }
       <div className="relative py-2 px-2 border-red-500">
         <input
           id="password"
-          name="password"
+          name="confirmpassword"
           type={passwordVisible ? "text" : "password"}
           autoComplete="current-password"
           required
@@ -107,9 +114,17 @@ const StepThird: React.FC<StepfirProps> = ({ SetCurrentStep, currentStep,steps }
       </div>
 
       <div className="px-2 pb-4">
-        <div className="py-2 px-2  mt-5  bg-[#636363] flex items-center justify-center border-yellow-600 rounded-md">
+        <div
+          className={`py-2 px-2  mt-5  
+         ${
+           isFormValid()
+             ? "bg-gradient-to-t from-[#AD0B40] to-[#FF1917]"
+             : "bg-[#636363]"
+         }
+        flex items-center justify-center border-yellow-600 rounded-md`}
+        >
           <button
-            className="text-white py-1 px-2 md:font-semibold text-sm text-center "
+            className={`text-white py-1 px-2 md:font-semibold text-sm text-center `}
             onClick={() => {
               SetCurrentStep((prev) => prev + 1);
             }}
